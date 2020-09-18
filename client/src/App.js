@@ -4,6 +4,7 @@ import SearchBar from "material-ui-search-bar";
 import axios from 'axios';
 import ParticlesBg from 'particles-bg';
 import logo from './tinify.png';
+import { Segment } from 'semantic-ui-react';
 function App() {
   const [searchValue, setSearchValue] = useState('');
   const onChangeSearch = query => setSearchValue(query);
@@ -28,7 +29,6 @@ function App() {
           <SearchBar className='Search-bar' placeholder='Paste your url here' onChange={onChangeSearch} value={searchValue}
             onRequestSearch={() => {
               try {
-                console.log(searchValue);
                 const response = axios.post('https://tiinify.herokuapp.com/url', { url: searchValue });
                 console.log('👉 Returned data:', response.then((res) => {
                   if (res.status == 200) {
