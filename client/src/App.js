@@ -22,7 +22,7 @@ function App() {
           <img src = {logo} />
         </header>
         <div className="Subtitle-area">
-          <h4>Shorten your URL!</h4>
+          <h4>Shorten your URL!</h4> <br />
         </div>
         <div className="Search-area">
 
@@ -31,12 +31,18 @@ function App() {
               try {
                 const response = axios.post('https://tiinify.herokuapp.com/url', { url: searchValue });
                 console.log('👉 Returned data:', response.then((res) => {
-                  if (res.status == 200) {
-                    console.log(res.data.slug);
-                    setValue('https://tiinify.herokuapp.com/'+res.data.slug);
-                  } else {
-                    console.log('error');
-                  }
+                    if (res.status == 200) {
+                      console.log(res.data.slug);
+                      setValue('https://tiinify.herokuapp.com/'+res.data.slug);
+                    } else {
+                      setValue('Enter a valid URL!!');
+                      console.log('error');
+                    }
+                })
+                .catch((err) => {
+                  setValue('Enter a valid URL!!');
+                  console.log('error');
+                  throw err;
                 }));
                
               } catch (e) {
@@ -45,7 +51,13 @@ function App() {
             }}
           />
           <card>
-          <h3><a href={value} target="_blank">{value}</a></h3>
+            <br />
+          {value && <>
+          <Segment piled>
+            <h3><a href={value} target="_blank">{value}</a></h3>
+          </Segment> </>
+          }
+          
           </card>
 
           
@@ -53,8 +65,9 @@ function App() {
         
 
       </div>
+      <br />
       <footer>
-        <p>Made with ❤️  by Turja</p>
+        <h3>Made with ❤️  by <a style={{color: "black"}}href="http://simantaturja.me">Turja</a></h3>
       </footer>
     </div>
 
