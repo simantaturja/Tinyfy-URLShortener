@@ -10,7 +10,7 @@ Visit https://tiinify.herokuapp.com/
 ![screenshot / demo of the app](./Screenshots/tinify-gif.gif)
 
 ## Technologies used
-<img src="https://img.icons8.com/color/452/mongodb.png" width="100px" height="100px") 
+<img src="https://img.icons8.com/color/452/mongodb.png" width="100px" height="100px">
 
 
 ## Installation
