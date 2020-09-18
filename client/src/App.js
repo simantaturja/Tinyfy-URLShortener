@@ -3,7 +3,7 @@ import './App.css';
 import SearchBar from "material-ui-search-bar";
 import axios from 'axios';
 import ParticlesBg from 'particles-bg';
-
+import logo from './tinify.png';
 function App() {
   const [searchValue, setSearchValue] = useState('');
   const onChangeSearch = query => setSearchValue(query);
@@ -14,11 +14,11 @@ function App() {
   return (
     <div className="App">
       <div className = "particles">
-        <ParticlesBg type = "circle" bg = {true}  num = {100} />
+        <ParticlesBg type = "circle" bg = {true}  num = {10} />
       </div>
       <div className="container">
         <header className="App-header">
-          <h1> Tinyfy </h1>
+          <img src = {logo} />
         </header>
         <div className="Subtitle-area">
           <h4>Shorten your URL!</h4>
