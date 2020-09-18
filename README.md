@@ -14,7 +14,7 @@ Visit https://tiinify.herokuapp.com/
 <img align="left" src="https://img2.pngio.com/express-js-png-5-png-image-expressjs-png-800_800.png" width="100px" height="100px" alt="express">
 <img align="left" src="https://www.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="100px" height="100px" alt="reactjs">
 <img align="left" src="https://img.icons8.com/color/452/nodejs.png" width="100px" height="100px" alt="nodejs">
-<img align="left" src="https://cdn.iconscout.com/icon/free/png-256/heroku-5-569467.png" width="100px" height="100px" alt="heroku">
+<img src="https://cdn.iconscout.com/icon/free/png-256/heroku-5-569467.png" width="100px" height="100px" alt="heroku">
 
 
 ## Installation
